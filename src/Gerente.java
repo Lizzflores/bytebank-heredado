@@ -1,15 +1,8 @@
 
-public class Funcionario {
- 
+public class Gerente {
 	private String nombre;
 	private String documento;
 	private double salario;
-	private int tipo;
-	
-	public Funcionario() {
-		
-	}
-	
 	public String getNombre() {
 		return nombre;
 	}
@@ -28,24 +21,8 @@ public class Funcionario {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+	
 	public double getBonificacion() {
-		if (this.tipo==0) {
-			return this.salario*0.1;
-		}else if(this.tipo == 1) {
-			return this.salario;
-		} else {
-			return 0;
-		}
-		
+		return this.salario;
 	}
-
-	public int getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(int tipo) {
-		this.tipo = tipo;
-	}
-	
-	
 }

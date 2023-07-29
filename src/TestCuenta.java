@@ -8,5 +8,6 @@ public class TestCuenta {
 		cc.transferir(1000, ca);
 		
 		System.out.println(cc.getSaldo());
+		System.out.println(ca.getSaldo());
 	}
 }

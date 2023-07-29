@@ -47,7 +47,7 @@ class Cuenta{
         Cuenta cuenta
     ){
         if(this.saldo>=valor){
-            this.saldo-=valor;
+            this.retirar(valor);
             cuenta.depositar(valor);
             return true;
         }

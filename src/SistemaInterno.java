@@ -1,9 +1,9 @@
 
 public class SistemaInterno {
 
-	private String clave="12345";
+	private String clave="AluraCursosOnLine";
 	
-	public boolean autentica(Gerente gerente) {
+	public boolean autentica(FuncionarioAutenticable gerente) {
 		boolean puedeIniciarSesion= gerente.iniciarSesion(clave);
 		if(puedeIniciarSesion) {
 			System.out.println("Login exitoso");

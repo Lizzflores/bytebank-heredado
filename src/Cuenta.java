@@ -1,10 +1,11 @@
-class Cuenta{
-    private double saldo;
-    private int agencia;
+public abstract class Cuenta{
+	
+    protected double saldo;
+    private int agencia=1;
     private int numero;
     private Cliente titular = new Cliente();
     //No retorna valor
-    private static int total = 0; // la palabra static indica
+    private static int total; // la palabra static indica
     //que la variable no sera alterada 
     //por la instancia si no por la cuenta
    
@@ -26,11 +27,8 @@ class Cuenta{
         total++;
         System.out.println("Se van creando: "+ total+" cuentas.");
     }
-    public void depositar(
-        double valor
-    ){
-        this.saldo+=valor;
-    }
+    public abstract void depositar(double valor);
+    
     //Retorna valor
     public boolean retirar(
         double valor

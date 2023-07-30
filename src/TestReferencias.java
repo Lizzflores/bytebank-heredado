@@ -11,6 +11,7 @@ public class TestReferencias {
 		
 		funcionario.setSalario(2000);
 		gerente.setSalario(10000);
-		//System.out.println();
+		//System.out.println(gerente.iniciarSesion("_ddd"));
+		gerente.iniciarSesion("_ddd");
 	}
 }

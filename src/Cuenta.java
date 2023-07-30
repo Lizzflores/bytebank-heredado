@@ -8,11 +8,13 @@ public abstract class Cuenta{
     private static int total; // la palabra static indica
     //que la variable no sera alterada 
     //por la instancia si no por la cuenta
-   
+   public Cuenta() {
+	   
+   }
     public Cuenta(int agencia, int numero) {
     	this.agencia=agencia;
     	this.numero=numero;
-    	System.out.println("");
+    	System.out.println("Estoy creando una cuenta"+this.numero);
     	
     	Cuenta.total ++;
     }
@@ -59,6 +61,22 @@ public abstract class Cuenta{
     public int getAgencia(){
         return agencia;
     }
+    
+    public void setAgencia(int agencia) {
+        if (agencia > 0) {
+            this.agencia = agencia;
+        }
+    }
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        if (numero > 0) {
+            this.numero = numero;
+        }
+    }
+
 
     public void setTitular(Cliente titular){
         this.titular=titular;

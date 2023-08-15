@@ -5,9 +5,9 @@ public class CuentaCorriente extends Cuenta {
 		super(agencia,numero);
 	}
 	@Override
-	public boolean retirar(double valor) {
+	public void retirar(double valor) {
 		double comision=0.2;
-		return super.retirar(valor+comision);
+		super.retirar(valor+comision);
 	}
 	@Override
 	public void depositar(double valor) {

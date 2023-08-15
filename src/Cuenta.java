@@ -34,7 +34,7 @@ public abstract class Cuenta{
     //Retorna valor
     public void retirar(
         double valor
-    ){
+    ) throws SaldoInsuficienteException{
     	if(this.saldo<valor) {
     		//buena practica primero validar excepciones
     	throw new SaldoInsuficienteException("No tienes saldo");
@@ -48,7 +48,11 @@ public abstract class Cuenta{
         Cuenta cuenta
     ){
         if(this.saldo>=valor){
-            this.retirar(valor);
+            try {
+				this.retirar(valor);
+			} catch (SaldoInsuficienteException e) {
+				e.printStackTrace();
+			}
             cuenta.depositar(valor);
             return true;
         }

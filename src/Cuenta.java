@@ -32,14 +32,15 @@ public abstract class Cuenta{
     public abstract void depositar(double valor);
     
     //Retorna valor
-    public boolean retirar(
+    public void boolean retirar(
         double valor
     ){
-        if(this.saldo>=valor){
-            this.saldo-=valor;
-            return true;
-         }
-        return false;
+    	if(this.saldo<valor) {
+    		//buena practica primero validar excepciones
+    	throw new SaldoInsuficienteException("No tienes saldo");
+    	}	
+    	this.saldo-=valor;
+    	
     }
 
     public boolean transferir(

@@ -32,7 +32,7 @@ public abstract class Cuenta{
     public abstract void depositar(double valor);
     
     //Retorna valor
-    public void boolean retirar(
+    public void retirar(
         double valor
     ){
     	if(this.saldo<valor) {

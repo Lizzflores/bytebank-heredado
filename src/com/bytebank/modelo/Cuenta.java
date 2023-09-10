@@ -1,5 +1,10 @@
 package com.bytebank.modelo;
 public abstract class Cuenta{
+	//public: accesible desde cualquier parte
+	//default : accesible dentro del paquete
+	// rotected default + clase mimsa
+	//private : solo desde la clase misma
+	
 	
     protected double saldo;
     private int agencia=1;
@@ -9,9 +14,22 @@ public abstract class Cuenta{
     private static int total; // la palabra static indica
     //que la variable no sera alterada 
     //por la instancia si no por la cuenta
+    
+    /**
+     * Clase que Representa a una cuenta en ByteBank
+     * 
+     * @auto Lizzflores
+     * @version 0.1
+     */
    public Cuenta() {
 	   
    }
+   /**
+   * Constructor para inicializar el objeto Cuenta a partir da agencia y numero
+   * @param agencia
+   * @param numero
+   */
+
     public Cuenta(int agencia, int numero) {
     	this.agencia=agencia;
     	this.numero=numero;

@@ -8,6 +8,12 @@ public class Cliente implements Autenticable{
    
    private AutenticacionUtil util;
    
+   /**
+    * Clase que Representa a un cliente en ByteBank
+    * 
+    * @auto Lizzflores
+    * @version 0.1
+    */
    
    public Cliente() {
 	   this.util=new AutenticacionUtil();

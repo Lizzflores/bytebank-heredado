@@ -1,0 +1,20 @@
+package com.bytebank.test;
+
+public class TestMain {
+	public static void main(String[] args) {
+		
+		int edad=20;
+		int edad2=15;
+		int edad3=67;
+		
+		//quiero agruparlas en una sola referencia 
+		//indices 	 0 1 2 3 4
+		// 			[ | |30 | | }
+		int[] edades= new int[5];
+		edades[2] = 30;
+		
+		System.out.println(edades[2]);
+		System.out.println(edades[0]);
+	}
+
+}

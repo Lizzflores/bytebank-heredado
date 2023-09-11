@@ -15,4 +15,9 @@ public class CuentaCorriente extends Cuenta {
 		this.saldo+=valor;
 		
 	}  
+	
+	@Override
+	public String toString() {
+	    return "CuentaCorriente, " + super.toString();
+	}
 } 

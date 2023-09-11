@@ -15,6 +15,14 @@ public class TestMain {
 		
 		System.out.println(edades[2]);
 		System.out.println(edades[0]);
+		
+		//System.out.println(edades[5]);
+		int tamanoArray = edades.length;
+		System.out.println(tamanoArray);
+		
+		for (int i=0; i<edades.length; i++) {
+			System.out.println(edades[i]);
+		}
 	}
 
 }

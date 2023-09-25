@@ -1,5 +1,7 @@
 package com.bytebank.test;
 import java.util.ArrayList;
+import java.util.List;
+
 import com.bytebank.modelo.Cuenta;
 import com.bytebank.modelo.CuentaCorriente;
 
@@ -7,7 +9,9 @@ public class TestArrayList {
 	
 	public static void main(String[] args) {
 		//<> forazando a que acepte solo un tipo de objeto
-		ArrayList<Cuenta> lista = new ArrayList<>();
+		
+		//obligatorio esperificar         no es obligatorio
+		List<Cuenta> lista = new ArrayList<>();
 		//referencia Objeto -> HEAP
 	    Cuenta cc= new CuentaCorriente(11,22);
 	    Cuenta cc2= new CuentaCorriente(13,42);

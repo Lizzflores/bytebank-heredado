@@ -118,4 +118,17 @@ public abstract class Cuenta{
     public String toString() {
         return "Numero: " + this.numero + ", Agencia: " + this.agencia;
     }
+    
+    //public boolean esIgual(Cuenta cuenta) {
+    //	return this.agencia == cuenta.getAgencia()&&
+    //			this.numero == cuenta.getNumero();
+    //}
+    
+    @Override
+    public boolean equals (Object obj) {
+    	//basada en valores, no en referencias
+    	Cuenta cuenta = (Cuenta) obj;
+    	return this.agencia == cuenta.getAgencia()&&
+    			this.numero == cuenta.getNumero();
+    }
 }

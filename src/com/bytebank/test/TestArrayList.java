@@ -32,9 +32,15 @@ public class TestArrayList {
 	    }
 	    
 	    boolean contiene = lista.contains(cc);
+	    //por referencia
 	    if (contiene) {
-	    	System.out.println("si");
+	    	System.out.println("si, es igual (equals)");
 	    }
+	    //por valores
+	  //  if(cc.esIgual(cc3)) {
+	   // 	System.out.println("si, son iguales");
+	   // }
+	    
 	}
 	
 }

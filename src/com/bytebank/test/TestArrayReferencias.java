@@ -18,7 +18,7 @@ public class TestArrayReferencias {
         CuentaAhorros ca2 = new CuentaAhorros(22, 22);
         cuentas[1] = ca2;    
 
-        System.out.println(cuentas[1].getNumero()  );
+        System.out.println(cuentas[1].getNumero());
 
         // alterou o tipo, realizando o cast
         CuentaCorriente ref = (CuentaCorriente) cuentas[0];

@@ -1,5 +1,5 @@
 package com.bytebank.modelo;
-public abstract class Cuenta{
+public abstract class Cuenta implements Comparable<Cuenta>{
 	//public: accesible desde cualquier parte
 	//default : accesible dentro del paquete
 	// rotected default + clase mimsa
@@ -116,7 +116,7 @@ public abstract class Cuenta{
     
     @Override
     public String toString() {
-        return "Numero: " + this.numero + ", Agencia: " + this.agencia;
+        return "Numero: " + this.numero + ", Agencia: " + this.agencia + ", Titular: " + this.titular.getNombre();
     }
     
     //public boolean esIgual(Cuenta cuenta) {
@@ -130,5 +130,13 @@ public abstract class Cuenta{
     	Cuenta cuenta = (Cuenta) obj;
     	return this.agencia == cuenta.getAgencia()&&
     			this.numero == cuenta.getNumero();
+    }
+    
+    @Override
+    public int compareTo(Cuenta o) {
+    	//orden natural: numero de agencia
+    	//return Integer.compare(this.agencia, o.getAgencia());
+    	//orden natural:saldo
+    	return Double.compare(this.getSaldo(), o.getSaldo());
     }
 }
